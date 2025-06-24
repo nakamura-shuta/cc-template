@@ -112,7 +112,14 @@ ex.
 ```
 cc-template/
 ├── .claude/
-│   └── settings.local.json  # Claude権限設定
-├── .work/                   # 作業用ディレクトリ（空）
-└── CLAUDE.md               # このファイル
+│   ├── commands/
+│   │   ├── README.md          # カスタムコマンドの説明
+│   │   ├── execute-task.md    # タスク実行コマンド
+│   │   └── refactor-analysis.md # リファクタリング分析コマンド
+│   └── settings.local.json    # Claude権限設定
+├── .work/                     # 作業用ディレクトリ（セッションごとのタスク管理）
+│   └── ${sessionId}/
+│       └── task.md           # タスク設計ドキュメント
+├── docs/                      # プロジェクトドキュメント
+└── CLAUDE.md                 # このファイル
 ```

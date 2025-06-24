@@ -20,55 +20,49 @@
 
 **自動実行モード:**
 フェーズを指定しない場合、以下の順番で自動実行されます：
-1. Explore → 2. Plan → 3. Code → 4. Cleanup
+explore → plan → code → cleanup
 
-**実行フェーズ:**
-1. **Explore** - コードベース探索
-   ```
-   /project:execute-task explore "user authentication"
-   ```
-   
-2. **Plan** - 設計・計画フェーズ
-   ```
-   /project:execute-task plan "implement JWT authentication"
-   ```
-   
-3. **Code** - TDD実装フェーズ
-   ```
-   /project:execute-task code "test_auth_module"
-   ```
-   
-4. **Document** - ドキュメント更新
-   ```
-   /project:execute-task document "API documentation"
-   ```
-   
-5. **Commit** - 変更のコミット
-   ```
-   /project:execute-task commit "feat: add JWT authentication"
-   ```
-   
-6. **Cleanup** - 作業ファイルのクリーンアップ
-   ```
-   /project:execute-task cleanup
-   ```
+**各フェーズの動作:**
 
-**主な機能:**
-- ripgrepによる高速検索
-- セッションID管理での作業ファイル整理
-- JS/TS/Rust対応のテスト・型チェック
-- Git操作の簡略化
-- 古い作業ファイルの自動削除
+1. **explore** - コードベース探索
+   - 関連ファイルの検索（Glob、Grep使用）
+   - コードパターンの分析
+   - 既存実装の調査
+
+2. **plan** - 設計・計画フェーズ
+   - `.work/${sessionId}/task.md`に設計ドキュメント作成
+   - 実装計画の策定
+   - 必要な変更点のリストアップ
+
+3. **code** - TDD実装フェーズ
+   - テストを先に作成（TDD方式）
+   - 実装コードの作成
+   - テスト実行（npm test、cargo test等）
+
+4. **document** - ドキュメント更新
+   - 関連ドキュメントの更新
+   - README.mdやCLAUDE.mdの修正
+
+5. **commit** - 変更のコミット
+   - git statusで変更確認
+   - 適切なコミットメッセージでコミット
+
+6. **cleanup** - 作業ファイルのクリーンアップ
+   - `.work`内の古いファイル削除
+   - 作業状況のサマリー
 
 **使用例:**
 ```bash
-# 自動実行モード（explore → plan → code → cleanup）
+# 自動実行モード
 /project:execute-task "user authentication feature"
 
 # 個別フェーズ実行
 /project:execute-task explore "authentication"
 /project:execute-task plan "JWT token implementation"
 /project:execute-task code "auth_test"
+/project:execute-task document "API docs"
+/project:execute-task commit "feat: add JWT auth"
+/project:execute-task cleanup
 ```
 
 ### `/project:refactor-analysis`
