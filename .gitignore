@@ -1,1 +1,8 @@
-.work/
+# .work ディレクトリの中身を除外（.gitkeep以外）
+.work/*
+!.work/.gitkeep
+!.work/sandbox/
+
+# .work/sandbox の中身を除外（.gitkeep以外）
+.work/sandbox/*
+!.work/sandbox/.gitkeep
