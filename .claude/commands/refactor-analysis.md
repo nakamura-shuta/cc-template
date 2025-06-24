@@ -1,3 +1,8 @@
+---
+allowed_tools: Bash(git:*), Bash(npm:*), Read(*), Fetch(*),Edit(*),WebFetch(*)
+description: "引数で指定したタスクを実行します。"
+---
+
 # リファクタリング分析コマンド
 
 現在のコードベースを詳細に分析し、以下の観点からリファクタリング計画を立案してください。計画は@docs/refactor.mdに記述してください。

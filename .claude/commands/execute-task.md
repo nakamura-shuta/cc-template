@@ -1,3 +1,8 @@
+---
+allowed_tools: Bash(git:*), Bash(npm:*), Read(*), Fetch(*),Edit(*),WebFetch(*)
+description: "引数で指定したタスクを実行します。"
+---
+
 # タスク実行コマンド
 
 このファイルはワークフローの各フェーズに対応するカスタムコマンドを定義します。
