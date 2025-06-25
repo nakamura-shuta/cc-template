@@ -10,6 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # 共通コマンド
 
 #### ファイル操作
+
 - `find`, `ls`, `cat` - ファイル検索と閲覧
 - `mkdir`, `mv`, `rename` - ディレクトリ作成とファイル移動
 
@@ -18,6 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Github操作には`gh`使用を推奨
 
 #### Rust開発（Cargoコマンド）
+
 - `cargo test` - テスト実行
 - `cargo clippy` - Lintチェック
 - `cargo fmt` - コードフォーマット
@@ -25,12 +27,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo` - その他のCargoコマンド
 
 #### 検索
+
 - `rg` (ripgrep), `grep` - ファイル内容検索
 
 
 ## コードスタイル
 
-- ES6 モジュール構文（import/export）を使用
 - 可能な限り分割代入を活用
 - 関数名は snake_case、クラス名は PascalCase で統一
 
@@ -80,13 +82,13 @@ ex.
 ex.
 ```
 > commit this
-````
+```
 
 6.cleanup
 
 @.work/sandboxなどに作成した使用済みファイルなどをcleanupする。
 
-#### TDDで進める
+### TDDで進める
 
 1.テストを実装
 まずは、実装したい機能のテストコードを実装する。
@@ -99,6 +101,7 @@ ex.
 テストを再度実行してパスすればOK.
 
 ### その他注意事項
+
 - 変更完了後は必ず型チェックを実行
 - 全テストではなく単体テストを優先して実行
 
@@ -123,3 +126,7 @@ cc-template/
 ├── docs/                      # プロジェクトドキュメント
 └── CLAUDE.md                 # このファイル
 ```
+
+## その他注意事項
+
+- 特に指定がない限り、回答は日本語で簡潔に行ってください

@@ -1,6 +1,6 @@
 ---
 allowed_tools: Bash(git:*), Bash(npm:*), Read(*), Fetch(*),Edit(*),WebFetch(*)
-description: "引数で指定したタスクを実行します。"
+description: "現在のコードを分析してリファクタリング計画を作成します。"
 ---
 
 # リファクタリング分析コマンド

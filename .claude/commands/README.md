@@ -4,6 +4,50 @@
 
 ## 利用可能なコマンド
 
+### `/project:commit`
+プロジェクトの変更を適切なフォーマットでコミットします。
+
+**使用方法:**
+```
+/project:commit
+/project:commit --no-verify
+```
+
+**機能:**
+- 自動的に事前チェック（lint、build、generate:docs）を実行
+- ステージングされていない場合は自動的にgit add
+- 変更内容を分析して適切なコミットメッセージを生成
+- 絵文字付きConventional Commitフォーマットを使用
+- 大きな変更の場合は複数のコミットに分割を提案
+
+**オプション:**
+- `--no-verify`: 事前チェックをスキップ
+
+### `/project:dump`
+現在のClaude Codeセッションの会話履歴をログファイルとして出力します。
+
+**使用方法:**
+```
+/project:dump
+```
+
+**出力:**
+- `.claude/logs/claude-code-session-{YYYY-MM-DD_HH-mm-ss}.md` にセッション履歴を保存
+- ユーザーとClaudeのやり取りをMarkdown形式で記録
+
+### `/project:test`
+テスト用のカスタムコマンドです。引数の受け渡しとコンテキスト情報の確認に使用しているか確認します。
+
+**使用方法:**
+```
+/project:test <argument>
+```
+
+**機能:**
+- 渡された引数を表示
+- ファイルパスが渡された場合はそのコンテンツも表示
+- 単なる確認用コマンド
+
 ### `/project:execute-task`
 ワークフローの各フェーズに対応した効率的なタスク実行をサポートします。
 
@@ -109,4 +153,5 @@ explore → plan → code → cleanup
 ```
 
 ## References
-https://docs.anthropic.com/en/docs/claude-code/slash-commands
+* [Document](https://docs.anthropic.com/en/docs/claude-code/slash-commands)
+* [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-cod)
