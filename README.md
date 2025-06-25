@@ -72,6 +72,9 @@ Conventional Commit形式（絵文字付き）でコミットを作成します�
 ### `/project:dump`
 現在のセッション履歴をログファイルとして保存します。
 
+### `/project:ask`
+コードベースに関する質問に答える読み取り専用コマンドです。
+
 ### `/project:refactor-analysis`
 コードベースを分析し、リファクタリング計画を作成します。
 
