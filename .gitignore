@@ -6,3 +6,10 @@
 # .work/sandbox の中身を除外（.gitkeep以外）
 .work/sandbox/*
 !.work/sandbox/.gitkeep
+
+# ログファイル
+.claude/logs/*
+!.claude/logs/.gitkeep
+
+# macOS
+.DS_Store

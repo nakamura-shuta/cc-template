@@ -75,6 +75,9 @@ Conventional Commit形式（絵文字付き）でコミットを作成します�
 ### `/project:ask`
 コードベースに関する質問に答える読み取り専用コマンドです。
 
+### `/project:gemini-search`
+Google Gemini CLIを使用してWeb検索を実行します。
+
 ### `/project:refactor-analysis`
 コードベースを分析し、リファクタリング計画を作成します。
 

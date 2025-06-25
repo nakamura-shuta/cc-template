@@ -68,6 +68,26 @@
 - #ultrathinkを使用した詳細な回答
 - 非破壊的な調査と分析に特化
 
+### `/project:gemini-search`
+Google Gemini CLIを使用してWeb検索を実行します。
+
+**使用方法:**
+```
+/project:gemini-search <検索クエリ>
+```
+
+**機能:**
+- Gemini CLIを通じたWeb検索
+- 日本語検索に対応
+- 最新のニュースや情報を取得
+
+**使用例:**
+```bash
+/project:gemini-search "日本のニュース"
+/project:gemini-search "日本のITニュース"
+/project:gemini-search "最新の技術トレンド"
+```
+
 ### `/project:execute-task`
 ワークフローの各フェーズに対応した効率的なタスク実行をサポートします。
 
