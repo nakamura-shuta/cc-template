@@ -88,6 +88,29 @@ Google Gemini CLIを使用してWeb検索を実行します。
 /project:gemini-search "最新の技術トレンド"
 ```
 
+### `/project:diff-branch`
+ブランチ間の変更点を検出・説明し、オプションでコードレビューを実施します。
+
+**使用方法:**
+```
+/project:diff-branch <target-branch> [--review]
+```
+
+**機能:**
+- 現在のブランチと指定ブランチの差分を分析
+- 変更内容をわかりやすく説明
+- 変更の統計情報を表示
+- `--review`オプションでコードレビューを実施
+
+**使用例:**
+```bash
+# mainブランチとの差分を確認
+/project:diff-branch main
+
+# developブランチとの差分を確認してレビュー
+/project:diff-branch develop --review
+```
+
 ### `/project:execute-task`
 ワークフローの各フェーズに対応した効率的なタスク実行をサポートします。
 

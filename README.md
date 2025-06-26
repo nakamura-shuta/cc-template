@@ -78,6 +78,9 @@ Conventional Commit形式（絵文字付き）でコミットを作成します�
 ### `/project:gemini-search`
 Google Gemini CLIを使用してWeb検索を実行します。
 
+### `/project:diff-branch`
+ブランチ間の変更点を検出・説明し、オプションでコードレビューを実施します。
+
 ### `/project:refactor-analysis`
 コードベースを分析し、リファクタリング計画を作成します。
 
