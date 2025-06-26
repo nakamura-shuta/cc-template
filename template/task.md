@@ -2,7 +2,7 @@
 ■使い方
 このテンプレートをコピーして実現したいタスクを記述します。
 その後、
-/project:execute-task "hoge/your-task.md"
+/project:task "hoge/your-task.md"
 を実行してください。
 ---
 

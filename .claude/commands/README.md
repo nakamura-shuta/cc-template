@@ -111,14 +111,14 @@ Google Gemini CLIを使用してWeb検索を実行します。
 /project:diff-branch develop --review
 ```
 
-### `/project:execute-task`
+### `/project:task`
 ワークフローの各フェーズに対応した効率的なタスク実行をサポートします。
 
 **使用方法:**
 ```
-/project:execute-task <phase> <task_description>
+/project:task <phase> <task_description>
 または
-/project:execute-task <task_description>  # 自動実行モード
+/project:task <task_description>  # 自動実行モード
 ```
 
 **引数:**
@@ -161,15 +161,15 @@ explore → plan → code → cleanup
 **使用例:**
 ```bash
 # 自動実行モード
-/project:execute-task "user authentication feature"
+/project:task "user authentication feature"
 
 # 個別フェーズ実行
-/project:execute-task explore "authentication"
-/project:execute-task plan "JWT token implementation"
-/project:execute-task code "auth_test"
-/project:execute-task document "API docs"
-/project:execute-task commit "feat: add JWT auth"
-/project:execute-task cleanup
+/project:task explore "authentication"
+/project:task plan "JWT token implementation"
+/project:task code "auth_test"
+/project:task document "API docs"
+/project:task commit "feat: add JWT auth"
+/project:task cleanup
 ```
 
 ### `/project:refactor-analysis`

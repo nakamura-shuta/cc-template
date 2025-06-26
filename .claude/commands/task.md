@@ -9,7 +9,7 @@ description: "引数で指定したタスクを実行します。"
 
 ## 使用方法
 ```
-/project:execute-task <phase> <task_description>
+/project:task <phase> <task_description>
 ```
 
 ## 実行内容

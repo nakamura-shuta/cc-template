@@ -21,7 +21,7 @@ cc-template/
 │   ├── commands/              # カスタムスラッシュコマンド
 │   │   ├── commit.md         # コミット作成コマンド
 │   │   ├── dump.md           # セッション履歴出力
-│   │   ├── execute-task.md   # タスク実行コマンド
+│   │   ├── task.md   # タスク実行コマンド
 │   │   ├── refactor-analysis.md # リファクタリング分析
 │   │   └── test.md           # テストコマンド
 │   └── settings.local.json    # 権限設定
@@ -52,12 +52,12 @@ claude .
 # タスクテンプレートをコピーして編集
 cp template/task.md my-task.md
 # エディタで編集後、実行
-/project:execute-task "my-task.md"
+/project:task "my-task.md"
 ```
 
 ## カスタムコマンド
 
-### `/project:execute-task`
+### `/project:task`
 タスクを段階的に実行します。
 - **explore**: コードベース調査
 - **plan**: 設計・計画
